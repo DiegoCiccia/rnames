@@ -1,0 +1,10 @@
+Package: rnames
+Title: Recursive Display of Items in Nested Lists
+Version: 1.0.0
+Authors@R: person("Diego", "Ciccia", role = c("aut", "cre"), email = "cicciadiego99@gmail.com")
+Maintainer: Diego Ciccia <cicciadiego99@gmail.com>
+Description: This program displays the names and paths of all the items nested within sublists of a list object.
+License: MIT + file LICENSE
+Author: Diego Ciccia [aut, cre]
+Encoding: UTF-8
+RoxygenNote: 7.2.3
