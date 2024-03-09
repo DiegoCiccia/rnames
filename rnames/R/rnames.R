@@ -1,6 +1,6 @@
 #' Recursive function to get names in nested lists
 #' @md
-#' @description Recursive display of elements' names in nested lists.
+#' @description Recursive display of names and paths of all the items nested within sublists of a list object.
 #' @param obj A list to be traversed.
 #' @param ignore A list of sublists to exclude from binary tree traversal. The program will report the ignored sublists as end-points. This option is normally suggested for very deep sublists that may cause recursion errors.
 #' @section Description:
