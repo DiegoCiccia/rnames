@@ -4,12 +4,14 @@
 \alias{rnames}
 \title{Recursive function to get names in nested lists}
 \usage{
-rnames(obj, ignore = c())
+rnames(obj, ignore, ...)
 }
 \arguments{
 \item{obj}{A list to be traversed.}
 
 \item{ignore}{A list of sublists to exclude from binary tree traversal. The program will report the ignored sublists as end-points. This option is normally suggested for very deep sublists that may cause recursion errors.}
+
+\item{...}{Undocumented}
 }
 \value{
 A list with entries corresponding to the end-points of the traversed list. The name of each element is the name of the end-point, while the item is a vector of the sublists that lead to the end-point.

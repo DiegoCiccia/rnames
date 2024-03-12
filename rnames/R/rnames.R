@@ -3,6 +3,7 @@
 #' @description Recursive display of names and paths of all the items nested within sublists of a list object.
 #' @param obj A list to be traversed.
 #' @param ignore A list of sublists to exclude from binary tree traversal. The program will report the ignored sublists as end-points. This option is normally suggested for very deep sublists that may cause recursion errors.
+#' @param ... Undocumented
 #' @section Description:
 #' The \code{rnames()} function recursively runs \code{names()} on a list object and returns a list with the names and paths of all the end items. 
 #' The paths are arrays cointaining all the sublists that need to be accessed in order to retrieve the corresponding item. 
@@ -33,8 +34,20 @@
 #'     D = 4)
 #' print(rnames(deep_list, ignore = c("D")))
 #' @export
-rnames <- function(obj, ignore = c()) {
-    out <- rec_search(obj = obj, text = deparse(substitute(obj)), ignore = ignore)
+rnames <- function(obj, ignore, ...) {
+    UseMethod("rnames")
+}
+
+#' @title General rnames method for lisis
+#' @name rnames.list
+#' @description General rnames method for generic lists.
+#' @param obj A list
+#' @param ignore A set of sublists to be ignored
+#' @param ... Undocumented
+#' @returns A list with rname class.
+#' @export
+rnames.list <- function(obj = obj, ignore = c(), ...) {
+    out <- rec_search(obj = obj, text = NULL, ignore = ignore)
     class(out) <- "rnames"
     return(out)
 }
