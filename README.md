@@ -2,8 +2,15 @@
 Recursive display of items in R nested lists.
 
 ## Setup
+CRAN:
 ```r
 install.packages("rnames")
+```
+
+GitHub (Latest version):
+```r
+library(devtools)
+devtools::install_github(repo = "https://github.com/DiegoCiccia/rnames/tree/main", subdir = "rnames")
 ```
 
 ## Syntax 
