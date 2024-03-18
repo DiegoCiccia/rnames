@@ -38,7 +38,7 @@ rnames <- function(obj, ignore, ...) {
     UseMethod("rnames")
 }
 
-#' @title General rnames method for lisis
+#' @title General rnames method for lists
 #' @name rnames.list
 #' @description General rnames method for generic lists.
 #' @param obj A list
